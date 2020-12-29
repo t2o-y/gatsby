@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-cli serve --mode development --hot --inline --watch-content-base --content-base static/ --open-page index.html"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,13 @@
   },
   "homepage": "https://github.com/t2o-y/gatsby#readme",
   "devDependencies": {
-    "gatsby-cli": "^2.15.0"
+    "gatsby-cli": "^2.15.0",
+    "webpack": "^5.11.0",
+    "workbox-webpack-plugin": "^6.0.2"
+  },
+  "dependencies": {
+    "@sideway/formula": "^3.0.0",
+    "@sideway/pinpoint": "^2.0.0",
+    "joi": "^17.3.0"
   }
 }
